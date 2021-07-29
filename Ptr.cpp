@@ -58,9 +58,9 @@ inline void Ptr::Print()
 		temp_init = ptr[i]->Get_init_ctr();
 		if (init_ctr < temp_init)init_ctr = temp_init;
 	}
-	cout << "¹  ";
-	(init_ctr > 6) ? cout << setw(init_ctr / 2 + 3) << "Ô.È.Î." << setw(init_ctr % 2 == 0 ? init_ctr / 2 - 3 : init_ctr / 2 - 2) << "" << " " : cout << setw(6) << "Ô.È.Î. ";
-	cout << "Äîìàøíèé òåëåôîí  Ðàáî÷èé òåëåôîí  Ñîòîâûé òåëåôîí Äîï. èíôîðìàöèÿ \n\n";
+	cout << "â„–  ";
+	(init_ctr > 6) ? cout << setw(init_ctr / 2 + 3) << "Ð¤.Ð˜.Ðž." << setw(init_ctr % 2 == 0 ? init_ctr / 2 - 3 : init_ctr / 2 - 2) << "" << " " : cout << setw(6) << "Ð¤.Ð˜.Ðž. ";
+	cout << "Ð”Ð¾Ð¼Ð°ÑˆÐ½Ð¸Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½  Ð Ð°Ð±Ð¾Ñ‡Ð¸Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½  Ð¡Ð¾Ñ‚Ð¾Ð²Ñ‹Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½ Ð”Ð¾Ð¿. Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ \n\n";
 	for (int i = 0; i < size; i++)
 	{
 		cout << i + 1 << "  ";
@@ -70,10 +70,10 @@ inline void Ptr::Print()
 
 void Ptr::Search(char* str)
 {
-	_strlwr_s(str, _msize(str)); //ïåðåâîäèì ïåðåäàííóþ ïîëüçîâàòåëåì ïîäñòðîêó â íèæíèé ðåãèñòð äëÿ óäîáñòâà ñðàâíåíèÿ
-	int init_ctr = 0;			 //ïåðåìåííàÿ äëÿ ïîèñêà ñàìîé äëèííîé ñòðîêè ñðåäè îòîáðàæàåìûõ â ðåçóëüòàòå
-	int* arr = new int[size] {}; //ìàññèâ äëÿ õðàíåíèÿ íîìåðîâ èíäåêñîâ îáúåêòîâ, ãäå íàéäåíî ñîâïàäåíèå. íóæåí äëÿ òîãî, ÷òîáû íå çàïóñêàòü öèêë for äâàæäû
-	int j = 0;					 //ñ÷¸ò÷èê ñîâïàäåíèé
+	_strlwr_s(str, _msize(str)); //Ð¿ÐµÑ€ÐµÐ²Ð¾Ð´Ð¸Ð¼ Ð¿ÐµÑ€ÐµÐ´Ð°Ð½Ð½ÑƒÑŽ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¼ Ð¿Ð¾Ð´ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð² Ð½Ð¸Ð¶Ð½Ð¸Ð¹ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€ Ð´Ð»Ñ ÑƒÐ´Ð¾Ð±ÑÑ‚Ð²Ð° ÑÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ñ
+	int init_ctr = 0;			 //Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ð°Ñ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° ÑÐ°Ð¼Ð¾Ð¹ Ð´Ð»Ð¸Ð½Ð½Ð¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐ¸ ÑÑ€ÐµÐ´Ð¸ Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°ÐµÐ¼Ñ‹Ñ… Ð² Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ðµ
+	int* arr = new int[size] {}; //Ð¼Ð°ÑÑÐ¸Ð² Ð´Ð»Ñ Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð² Ð¸Ð½Ð´ÐµÐºÑÐ¾Ð² Ð¾Ð±ÑŠÐµÐºÑ‚Ð¾Ð², Ð³Ð´Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾ ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ðµ. Ð½ÑƒÐ¶ÐµÐ½ Ð´Ð»Ñ Ñ‚Ð¾Ð³Ð¾, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ðµ Ð·Ð°Ð¿ÑƒÑÐºÐ°Ñ‚ÑŒ Ñ†Ð¸ÐºÐ» for Ð´Ð²Ð°Ð¶Ð´Ñ‹
+	int j = 0;					 //ÑÑ‡Ñ‘Ñ‚Ñ‡Ð¸Ðº ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¹
 	for (int i = 0; i < size; i++)
 	{
 		int length = ptr[i]->Get_init_ctr() + 1;
@@ -88,9 +88,9 @@ void Ptr::Search(char* str)
 		}
 		delete[]src;
 	}
-	cout << "¹  ";
-	(init_ctr > 6) ? cout << setw(init_ctr / 2 + 3) << "Ô.È.Î." << setw(init_ctr % 2 == 0 ? init_ctr / 2 - 3 : init_ctr / 2 - 2) << "" << " " : cout << "Ô.È.Î. ";
-	cout << "Äîìàøíèé òåëåôîí  Ðàáî÷èé òåëåôîí  Ñîòîâûé òåëåôîí Äîï. èíôîðìàöèÿ \n\n";
+	cout << "â„–  ";
+	(init_ctr > 6) ? cout << setw(init_ctr / 2 + 3) << "Ð¤.Ð˜.Ðž." << setw(init_ctr % 2 == 0 ? init_ctr / 2 - 3 : init_ctr / 2 - 2) << "" << " " : cout << "Ð¤.Ð˜.Ðž. ";
+	cout << "Ð”Ð¾Ð¼Ð°ÑˆÐ½Ð¸Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½  Ð Ð°Ð±Ð¾Ñ‡Ð¸Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½  Ð¡Ð¾Ñ‚Ð¾Ð²Ñ‹Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½ Ð”Ð¾Ð¿. Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ \n\n";
 	for (int i = 0; i < j; i++)
 	{
 		cout << arr[i] + 1 << "  ";
@@ -101,22 +101,22 @@ void Ptr::Search(char* str)
 
 void Ptr::SaveFile()
 {
-	SetFileAttributes(L"Òåëåôîííàÿ êíèãà.txt", FILE_ATTRIBUTE_NORMAL);
-	ofstream result("Òåëåôîííàÿ êíèãà.txt", ios_base::trunc);
+	SetFileAttributes(L"Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½Ð½Ð°Ñ ÐºÐ½Ð¸Ð³Ð°.txt", FILE_ATTRIBUTE_NORMAL);
+	ofstream result("Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½Ð½Ð°Ñ ÐºÐ½Ð¸Ð³Ð°.txt", ios_base::trunc);
 	if (result.is_open()) {
 		streambuf* backup = cout.rdbuf();
 		cout.rdbuf(result.rdbuf());
 		Print();
 		cout.rdbuf(backup);
 		result.close();
-		/*wstring put = L"Òåëåôîííàÿ êíèãà.txt";
+		/*wstring put = L"Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½Ð½Ð°Ñ ÐºÐ½Ð¸Ð³Ð°.txt";
 		LPCWSTR name2 = put.c_str();*/
-		SetFileAttributes(L"Òåëåôîííàÿ êíèãà.txt", FILE_ATTRIBUTE_READONLY);
-		cout << "Ôàéë óñïåøíî ñîçäàí.\n";
+		SetFileAttributes(L"Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½Ð½Ð°Ñ ÐºÐ½Ð¸Ð³Ð°.txt", FILE_ATTRIBUTE_READONLY);
+		cout << "Ð¤Ð°Ð¹Ð» ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½.\n";
 	}
 	else
 	{
-		cout << "Íå óäàëîñü ñîçäàòü ôàéë íà äèñêå\n";
+		cout << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ ÑÐ¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ„Ð°Ð¹Ð» Ð½Ð° Ð´Ð¸ÑÐºÐµ\n";
 	}
 	system("pause");
 }
@@ -125,7 +125,7 @@ void Ptr::LoadFile()
 {
 	int counter = 0;
 	string str;
-	ifstream count("Òåëåôîííàÿ êíèãà.txt");
+	ifstream count("Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½Ð½Ð°Ñ ÐºÐ½Ð¸Ð³Ð°.txt");
 	if (count.is_open())
 	{
 		while (!count.eof())
@@ -147,11 +147,11 @@ void Ptr::LoadFile()
 		Ptr::size = counter;
 		for (int i = 0; i < size; i++)
 			ptr[i] = new Subscriber(0);
-		ifstream spisok("Òåëåôîííàÿ êíèãà.txt");
+		ifstream spisok("Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½Ð½Ð°Ñ ÐºÐ½Ð¸Ð³Ð°.txt");
 		if (spisok.is_open()) {
 			getline(spisok, str);
-			int name_ctr = 5; //ðàññ÷èòûâàåì øèðèíó ïîëÿ "Ô.È.Î.": ìèíèìàëüíî îíà ðàâíà 6, íî ó÷èòûâÿ ïðîáåë ïåðåä ñëåäóþùèì çàãîëîâêîì ñòàâèì 5
-			for (int i = 9; str[i] != 'Ä'; i++, name_ctr++) {} //ïåðâûå 3 ñèìâîëà - ýòî íîìåð, ñëåäóþùèå 6 òî÷íî ïðèíàäëåæàò Ô.È.Î. Ïîèñê íà÷èíàåì ñ 9-ãî ñèìâîëà
+			int name_ctr = 5; //Ñ€Ð°ÑÑÑ‡Ð¸Ñ‚Ñ‹Ð²Ð°ÐµÐ¼ ÑˆÐ¸Ñ€Ð¸Ð½Ñƒ Ð¿Ð¾Ð»Ñ "Ð¤.Ð˜.Ðž.": Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾ Ð¾Ð½Ð° Ñ€Ð°Ð²Ð½Ð° 6, Ð½Ð¾ ÑƒÑ‡Ð¸Ñ‚Ñ‹Ð²Ñ Ð¿Ñ€Ð¾Ð±ÐµÐ» Ð¿ÐµÑ€ÐµÐ´ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¼ Ð·Ð°Ð³Ð¾Ð»Ð¾Ð²ÐºÐ¾Ð¼ ÑÑ‚Ð°Ð²Ð¸Ð¼ 5
+			for (int i = 9; str[i] != 'Ð”'; i++, name_ctr++) {} //Ð¿ÐµÑ€Ð²Ñ‹Ðµ 3 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð° - ÑÑ‚Ð¾ Ð½Ð¾Ð¼ÐµÑ€, ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ 6 Ñ‚Ð¾Ñ‡Ð½Ð¾ Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð°Ñ‚ Ð¤.Ð˜.Ðž. ÐŸÐ¾Ð¸ÑÐº Ð½Ð°Ñ‡Ð¸Ð½Ð°ÐµÐ¼ Ñ 9-Ð³Ð¾ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð°
 			for (int i = 0; i < size; i++)
 			{
 				getline(spisok, str);
@@ -213,12 +213,12 @@ void Ptr::LoadFile()
 				ptr[i]->Set_Info(info);
 			}
 			spisok.close();
-			cout << "Ôàéë óñïåøíî çàãðóæåí.\n";
+			cout << "Ð¤Ð°Ð¹Ð» ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½.\n";
 		}
 	}
 	else
 	{
-		cout << "Íå óäàëîñü çàãðóçèòü ôàéë ñ äèñêà\n";
+		cout << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð·Ð°Ð³Ñ€ÑƒÐ·Ð¸Ñ‚ÑŒ Ñ„Ð°Ð¹Ð» Ñ Ð´Ð¸ÑÐºÐ°\n";
 	}
 	system("pause");
 }
