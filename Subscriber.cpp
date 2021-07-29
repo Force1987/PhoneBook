@@ -25,15 +25,15 @@ void Input(char(&var)[N])
 Subscriber::Subscriber ()
 {
     {
-            cout << "Ââåäèòå Ô.È.Î.: ";
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¤.Ð˜.Ðž.: ";
             Subscriber::initials = Name();
-            cout << "Äîìàøíèé òåëåôîí: ";
+            cout << "Ð”Ð¾Ð¼Ð°ÑˆÐ½Ð¸Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½: ";
             Input(Subscriber::homePh);
-            cout << "Ðàáî÷èé òåëåôîí: ";
+            cout << "Ð Ð°Ð±Ð¾Ñ‡Ð¸Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½: ";
             Input(Subscriber::workPh);
-            cout << "Ñîòîâûé òåëåôîí: ";
+            cout << "Ð¡Ð¾Ñ‚Ð¾Ð²Ñ‹Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½: ";
             Input(Subscriber::cellPh);
-            cout << "Äîïîëíèòåëüíàÿ èíôîðìàöèÿ î êîíòàêòå: ";
+            cout << "Ð”Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾ ÐºÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ðµ: ";
             info = Name();
             cout << endl;
     }
